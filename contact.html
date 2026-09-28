@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Northbound Logistics</title>
+<meta name="description" content="Get a routed freight quote from Northbound Logistics. Control tower 24/7/365, quote turnaround under one business day.">
+<meta name="theme-color" content="#082d38">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Martian+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="shell header__inner">
+    <a class="logo" href="index.html">
+      <span class="logo__mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter">
+          <path d="M2 8h11v9H2z"/><path d="M13 11h5l4 3.5V17h-9z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/>
+        </svg>
+      </span>
+      <span class="logo__txt"><b>NORTHBOUND</b><small>LOGISTICS</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="services.html">Services</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--sm" href="#quote"><span>Get a Quote</span></a>
+      <button class="burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="drawer">
+        <span class="burger__box"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <ul class="drawer__list">
+    <li><a class="drawer__link" href="index.html">Home<sup>01</sup></a></li>
+    <li><a class="drawer__link" href="services.html">Services<sup>02</sup></a></li>
+    <li><a class="drawer__link" href="about.html">About<sup>03</sup></a></li>
+    <li><a class="drawer__link" href="contact.html">Contact<sup>04</sup></a></li>
+  </ul>
+  <div class="drawer__foot">
+    <a class="btn btn--block" href="#quote"><span>Request a Quote</span></a>
+    <p class="drawer__meta">24/7 Control Tower &nbsp;·&nbsp; <a href="tel:+15550148800">+1 (555) 014-8800</a></p>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= PAGE HERO ================= -->
+<section class="page-hero">
+  <div class="page-hero__bg">
+    <img src="assets/img/svc-lastmile.jpg" alt="" width="800" height="550">
+  </div>
+  <div class="page-hero__grid" aria-hidden="true"></div>
+  <div class="shell page-hero__inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> / <span>Contact</span>
+    </nav>
+    <p class="eyebrow">Control tower</p>
+    <h1 class="h1">Tell us what needs to move</h1>
+    <p class="lead">Send the origin, destination and cargo profile. You get a costed route, a committed transit window and a named operator within one business day.</p>
+  </div>
+</section>
+
+<!-- ================= QUOTE FORM ================= -->
+<section class="section" id="quote">
+  <div class="shell">
+    <div class="contact-grid">
+
+      <div data-reveal="left">
+        <div class="head" style="margin-bottom:1.8rem">
+          <p class="eyebrow">Freight enquiry</p>
+          <h2 class="h2" style="margin-top:1rem">Quote request</h2>
+        </div>
+
+        <form class="form" data-form novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Full name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jordan Ellis" required>
+              <span class="field__err">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="company">Company <span class="req">*</span></label>
+              <input type="text" id="company" name="company" placeholder="Halden Industrial" required>
+              <span class="field__err">Please enter your company name.</span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="email">Work email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+              <span class="field__err">Enter a valid email address.</span>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000">
+              <span class="field__err">Enter a valid phone number.</span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="mode">Service required <span class="req">*</span></label>
+              <select id="mode" name="mode" required>
+                <option value="">Select a service…</option>
+                <option>Road Freight</option>
+                <option>Ocean Freight</option>
+                <option>Air Freight</option>
+                <option>Warehousing &amp; Distribution</option>
+                <option>Customs Brokerage</option>
+                <option>Project &amp; Heavy Lift</option>
+                <option>Last Mile</option>
+                <option>Not sure yet</option>
+              </select>
+              <span class="field__err">Please choose a service.</span>
+            </div>
+            <div class="field">
+              <label for="weight">Total weight (kg)</label>
+              <input type="text" id="weight" name="weight" placeholder="e.g. 12000" inputmode="numeric">
+              <span class="field__err"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="origin">Origin <span class="req">*</span></label>
+              <input type="text" id="origin" name="origin" placeholder="City, port or postcode" required>
+              <span class="field__err">Please enter the origin.</span>
+            </div>
+            <div class="field">
+              <label for="destination">Destination <span class="req">*</span></label>
+              <input type="text" id="destination" name="destination" placeholder="City, port or postcode" required>
+              <span class="field__err">Please enter the destination.</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="details">Cargo details</label>
+            <textarea id="details" name="details" placeholder="What are you moving? Dimensions, number of pallets, hazard class or UN number if applicable, and any delivery window constraints."></textarea>
+            <span class="field__err"></span>
+          </div>
+
+          <div class="check">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I agree to be contacted about this enquiry and accept the privacy policy. <span class="req">*</span></label>
+          </div>
+          <span class="field__err">Please tick to continue.</span>
+
+          <div class="form__status" role="status" aria-live="polite"></div>
+
+          <button class="btn btn--block" type="submit"><span>Send Enquiry</span></button>
+
+          <p class="form__note">Demonstration form — submissions are validated in the browser and are not transmitted anywhere.</p>
+        </form>
+      </div>
+
+      <!-- ================= SIDE PANEL ================= -->
+      <aside data-reveal="right">
+        <div class="head" style="margin-bottom:1.4rem">
+          <p class="eyebrow">Direct lines</p>
+          <h2 class="h3" style="margin-top:.9rem">Talk to the control tower</h2>
+        </div>
+
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+            <div>
+              <dt>Operations line</dt>
+              <dd><a href="tel:+15550148800">+1 (555) 014-8800</a></dd>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><rect x="2" y="4" width="20" height="16"/><path d="m2 6 10 7 10-7"/></svg></div>
+            <div>
+              <dt>Quotes &amp; tenders</dt>
+              <dd><a href="mailto:freight@northbound.example">freight@northbound.example</a></dd>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <dt>Head office</dt>
+              <dd>Unit 14, Dockside Logistics Park<br>Rotterdam 3198 LB, Netherlands</dd>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="square"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+            <div>
+              <dt>Control tower hours</dt>
+              <dd>
+                <div class="hours">
+                  <div><span>Mon – Fri</span><b>24 hours</b></div>
+                  <div><span>Saturday</span><b>24 hours</b></div>
+                  <div><span>Sunday</span><b>24 hours</b></div>
+                  <div><span>Public holidays</span><b>Duty manager</b></div>
+                </div>
+              </dd>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta__side" style="margin-top:1.4rem">
+          <p class="stat__label" style="margin-bottom:.4rem">Existing shipment?</p>
+          <div class="cta__row"><span>Tracking</span><b>NB-0000000</b></div>
+          <div class="cta__row"><span>Portal</span><b>Client login &rarr;</b></div>
+          <div class="cta__row"><span>Invoicing</span><b>Accounts &rarr;</b></div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= HUB MAP ================= -->
+<section class="section section--alt">
+  <div class="shell">
+    <div class="head head--center">
+      <p class="eyebrow eyebrow--center">Where we are</p>
+      <h2 class="h2" style="max-width:18ch">Nine hubs, four continents</h2>
+      <p class="lead">Each hub runs a full operations desk, a bonded facility and a customs office — so freight does not sit waiting for the next leg to be arranged.</p>
+    </div>
+
+    <div class="steps" data-reveal>
+      <article class="step"><p class="step__num">EU</p><h3 class="step__title">Rotterdam</h3><p class="step__text">Global HQ. 180,000 sq ft bonded. Deep-sea and short-sea gateway.</p></article>
+      <article class="step"><p class="step__num">NL</p><h3 class="step__title">Eindhoven</h3><p class="step__text">High-tech cluster hub. Bonded, ESD-safe, 24/7 cross-dock.</p></article>
+      <article class="step"><p class="step__num">SG</p><h3 class="step__title">Singapore</h3><p class="step__text">APAC control point. Air charter desk and regional consolidation.</p></article>
+      <article class="step"><p class="step__num">AE</p><h3 class="step__title">Dubai</h3><p class="step__text">Gulf and Africa lane hub. Free-zone processing and bonded storage.</p></article>
+      <article class="step"><p class="step__num">US</p><h3 class="step__title">Chicago</h3><p class="step__text">Midwest distribution. Rail intermodal and road linehaul to both coasts.</p></article>
+      <article class="step"><p class="step__num">DE</p><h3 class="step__title">Duisburg</h3><p class="step__text">Rail terminal adjacent. European inland distribution network.</p></article>
+      <article class="step"><p class="step__num">CN</p><h3 class="step__title">Shenzhen</h3><p class="step__text">Origin consolidation. Supplier audit and factory inspection desk.</p></article>
+      <article class="step"><p class="step__num">IN</p><h3 class="step__title">Mumbai</h3><p class="step__text">South Asia gateway. Air and ocean, project cargo certified.</p></article>
+      <article class="step"><p class="step__num">GB</p><h3 class="step__title">Birmingham</h3><p class="step__text">UK &amp; Ireland hub. Post-Brexit customs and bonded distribution.</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <span class="logo__mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter">
+              <path d="M2 8h11v9H2z"/><path d="M13 11h5l4 3.5V17h-9z"/><circle cx="6.5" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/>
+            </svg>
+          </span>
+          <span class="logo__txt"><b>NORTHBOUND</b><small>LOGISTICS</small></span>
+        </a>
+        <p>Industrial freight, warehousing and customs brokerage across 46 countries. Own fleet, in-house licences, one control tower.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.2V21h-4v-6c0-1.5-.5-2.6-1.9-2.6-1.1 0-1.7.75-2 1.5-.1.3-.13.65-.13 1.05V21h-4z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.3l-4.9-6.4L5 21H1.9l7.2-8.3L1.5 3H8l4.4 5.9zm-1.1 16.1h1.7L7.7 4.8H5.9z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.4-.44-5a2.9 2.9 0 0 0-2-2C18.9 4.5 12 4.5 12 4.5s-6.9 0-8.6.5a2.9 2.9 0 0 0-2 2C1 8.6 1 12 1 12s0 3.4.44 5a2.9 2.9 0 0 0 2 2c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.9 2.9 0 0 0 2-2C23 15.4 23 12 23 12M9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Road Freight</a></li>
+          <li><a href="services.html">Ocean Freight</a></li>
+          <li><a href="services.html">Air Freight</a></li>
+          <li><a href="services.html">Warehousing</a></li>
+          <li><a href="services.html">Customs Brokerage</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html">Safety Record</a></li>
+          <li><a href="about.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Hubs</h4>
+        <ul>
+          <li><a href="contact.html">Rotterdam</a></li>
+          <li><a href="contact.html">Singapore</a></li>
+          <li><a href="contact.html">Chicago</a></li>
+          <li><a href="contact.html">Dubai</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p>&copy; <span data-year>2026</span> Northbound Logistics. All rights reserved.</p>
+      <nav aria-label="Legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
